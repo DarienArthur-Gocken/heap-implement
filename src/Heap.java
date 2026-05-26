@@ -71,4 +71,10 @@ public class Heap {
         }
     }
 
+    public void pop() {
+        if(heapArray.size() == 0) return;
+
+        
+    }
+
 }
