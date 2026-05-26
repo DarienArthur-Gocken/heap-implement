@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * A min-heap. 
  * 
@@ -22,5 +24,26 @@
  *  - hold private instance variables
  */
 public class Heap {
+    private ArrayList<Integer> heapArray = new ArrayList<>();
+
+    //if the left child exists, returns the index of the left child.
+    //otherwise returns -1
+    private int left(int index) {
+        int leftChild = index*2+1;
+        if(leftChild >= heapArray.size()) {
+            return leftChild;
+        }
+        return -1;
+    }
+
+    //if the right child exists, returns the index of the right child.
+    //otherwise returns -1
+    private int right(int index) {
+        int rightChild = index*2+2;
+        if(rightChild >= heapArray.size()) {
+            return rightChild;
+        }
+        return -1;
+    }
 
 }
