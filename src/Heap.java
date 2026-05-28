@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A min-heap. 
@@ -24,7 +25,7 @@ import java.util.ArrayList;
  *  - hold private instance variables
  */
 public class Heap {
-    private ArrayList<Integer> heapArray = new ArrayList<>();
+    private List<Integer> heapArray = new ArrayList<>();
 
     //if the left child exists, returns the index of the left child.
     //otherwise returns -1
@@ -49,7 +50,7 @@ public class Heap {
     // if parent is greater than 0, then return the parent of the given index.
     private int parent(int index) {
         int parent = (index - 1) / 2;
-        if (parent >= 0) {
+        if (index > 0) {
             return parent;
         }
         return -1;
@@ -74,8 +75,8 @@ public class Heap {
     }
 
     public int pop() {
-        if(heapArray.size() == 0) {
-            throw new IllegalArgumentException();
+        if(heapArray.isEmpty()) {
+            throw new IllegalArgumentException("Heap is empty");
         }
         int popped = heapArray.get(0);
 
