@@ -16,4 +16,20 @@ public class HeapTest {
 
         assertEquals(1, heap.peek());
     }
+
+    @Test
+    public void testPop() {
+        Heap heap = new Heap();
+
+        heap.add(10);
+        heap.add(5);
+        heap.add(2);
+        heap.add(6);
+        heap.add(20);
+        heap.add(1);
+
+        heap.pop();
+
+        assertEquals(2, heap.peek());
+    }
 }
