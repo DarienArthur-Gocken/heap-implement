@@ -84,4 +84,12 @@ public class Heap {
         return heapArray.get(0);
     }
 
+    public int size() {
+        return heapArray.size();
+    }
+
+    public boolean isEmpty() {
+        return heapArray.isEmpty();
+    }
+
 }
